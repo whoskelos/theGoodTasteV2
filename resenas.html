@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/custom.css">
+    <title>The Good Taste</title>
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./img/apple.png" alt="logo de la web" width="50">
+                TGT
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Reseñas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contacto.html">Contacto</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-danger" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!--TARJETAS-->
+    <div class="container-fluid galeria d-flex justify-content-around flex-wrap">
+
+        <div class="card tarjeta-comida" style="width: 18rem;">
+            <img src="./img/hamburguesa.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Hamburguesería "Nombre"</h5>
+                <p class="card-text">Situada en "Nombre Ciudad", variedad increible de hamburguesas, precios acorde a la
+                    calidad de la comida</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Carta
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Entrantes</th>
+                                                <th scope="col">Primeros</th>
+                                                <th scope="col">Segundos</th>
+                                                <th scope="col">Postres</th>
+                                                <th scope="col">Bebidas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-danger">Cerrar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <a href="#" class="btn btn-danger">Saber más</a> -->
+            </div>
+        </div>
+
+        <div class="card tarjeta-comida" style="width: 18rem;">
+            <img src="./img/tacos.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Mexicano "Nombre"</h5>
+                <p class="card-text">Situada en "Nombre Ciudad", comida mexicana , precios acorde a la calidad de la
+                    comida</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Carta
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Entrantes</th>
+                                                <th scope="col">Primeros</th>
+                                                <th scope="col">Segundos</th>
+                                                <th scope="col">Postres</th>
+                                                <th scope="col">Bebidas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-danger">Cerrar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="#" class="btn btn-danger">Saber más</a> -->
+            </div>
+        </div>
+
+
+        <div class="card tarjeta-comida" style="width: 18rem;">
+            <img src="./img/solomillo.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Americano "Nombre"</h5>
+                <p class="card-text">Situada en "Nombre Ciudad", comida americana , precios acorde a la calidad de la
+                    comida</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Carta
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Entrantes</th>
+                                                <th scope="col">Primeros</th>
+                                                <th scope="col">Segundos</th>
+                                                <th scope="col">Postres</th>
+                                                <th scope="col">Bebidas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-danger">Cerrar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="#" class="btn btn-danger">Saber más</a> -->
+            </div>
+        </div>
+
+
+        <div class="card tarjeta-comida" style="width: 18rem;">
+            <img src="./img/espaguetis.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Italiano "Nombre"</h5>
+                <p class="card-text">Situada en "Nombre Ciudad", comida italiana , precios acorde a la calidad de la
+                    comida</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Carta
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Entrantes</th>
+                                                <th scope="col">Primeros</th>
+                                                <th scope="col">Segundos</th>
+                                                <th scope="col">Postres</th>
+                                                <th scope="col">Bebidas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-danger">Cerrar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="#" class="btn btn-danger">Saber más</a> -->
+            </div>
+        </div>
+
+
+        <div class="card tarjeta-comida" style="width: 18rem;">
+            <img src="./img/sushi.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Japonés "Nombre"</h5>
+                <p class="card-text">Situada en "Nombre Ciudad", comida japonesa , precios acorde a la calidad de la
+                    comida</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Carta
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Entrantes</th>
+                                                <th scope="col">Primeros</th>
+                                                <th scope="col">Segundos</th>
+                                                <th scope="col">Postres</th>
+                                                <th scope="col">Bebidas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-danger">Cerrar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="#" class="btn btn-danger">Saber más</a> -->
+            </div>
+        </div>
+
+
+        <div class="card tarjeta-comida" style="width: 18rem;">
+            <img src="./img/bbq.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Grill "Nombre"</h5>
+                <p class="card-text">Situada en "Nombre Ciudad", comida estilo BBQ , precios acorde a la calidad de la
+                    comida</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Carta
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Entrantes</th>
+                                                <th scope="col">Primeros</th>
+                                                <th scope="col">Segundos</th>
+                                                <th scope="col">Postres</th>
+                                                <th scope="col">Bebidas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-danger">Cerrar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="#" class="btn btn-danger">Saber más</a> -->
+            </div>
+        </div>
+
+
+        <div class="card tarjeta-comida" style="width: 18rem;">
+            <img src="./img/pulpo.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Marisquería "Nombre"</h5>
+                <p class="card-text">Situada en "Nombre Ciudad", marisco , precios acorde a la calidad de la comida</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Carta
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Entrantes</th>
+                                                <th scope="col">Primeros</th>
+                                                <th scope="col">Segundos</th>
+                                                <th scope="col">Postres</th>
+                                                <th scope="col">Bebidas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-danger">Cerrar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="#" class="btn btn-danger">Saber más</a> -->
+            </div>
+        </div>
+
+        <div class="card tarjeta-comida" style="width: 18rem;">
+            <img src="./img/china.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Restaurante Chino "Nombre"</h5>
+                <p class="card-text">Situada en "Nombre Ciudad", comida muy fiel a china, precios acorde a la
+                    calidad de la comida</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Carta
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Entrantes</th>
+                                                <th scope="col">Primeros</th>
+                                                <th scope="col">Segundos</th>
+                                                <th scope="col">Postres</th>
+                                                <th scope="col">Bebidas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-danger">Cerrar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <a href="#" class="btn btn-danger">Saber más</a> -->
+            </div>
+        </div>
+
+
+        <div class="card tarjeta-comida" style="width: 18rem;">
+            <img src="./img/india.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Restaurante Indu "Nombre"</h5>
+                <p class="card-text">Situada en "Nombre Ciudad", comida tipica de la India , precios acorde a la calidad
+                    de la
+                    comida</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Carta
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Entrantes</th>
+                                                <th scope="col">Primeros</th>
+                                                <th scope="col">Segundos</th>
+                                                <th scope="col">Postres</th>
+                                                <th scope="col">Bebidas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-danger">Cerrar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <a href="#" class="btn btn-danger">Saber más</a> -->
+            </div>
+        </div>
+
+        <div class="card tarjeta-comida" style="width: 18rem;">
+            <img src="./img/turquia.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Restaurante Turco "Nombre"</h5>
+                <p class="card-text">Situada en "Nombre Ciudad", comida tipica de Turquia, precios acorde a la
+                    calidad de la comida</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Carta
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Entrantes</th>
+                                                <th scope="col">Primeros</th>
+                                                <th scope="col">Segundos</th>
+                                                <th scope="col">Postres</th>
+                                                <th scope="col">Bebidas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-danger">Cerrar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <a href="#" class="btn btn-danger">Saber más</a> -->
+            </div>
+        </div>
+
+        <div class="card tarjeta-comida" style="width: 18rem;">
+            <img src="./img/hamburguesa2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Hamburguesería "Nombre"</h5>
+                <p class="card-text">Situada en "Nombre Ciudad", variedad increible de hamburguesas, precios acorde a la
+                    calidad de la comida</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Carta
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Entrantes</th>
+                                                <th scope="col">Primeros</th>
+                                                <th scope="col">Segundos</th>
+                                                <th scope="col">Postres</th>
+                                                <th scope="col">Bebidas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-danger">Cerrar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <a href="#" class="btn btn-danger">Saber más</a> -->
+            </div>
+        </div>
+
+        <div class="card tarjeta-comida" style="width: 18rem;">
+            <img src="./img/paella.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Restaurante "Nombre"</h5>
+                <p class="card-text">Situada en "Nombre Ciudad", comida espanola precios acorde a la
+                    calidad de la comida</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Ver Carta
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Carta</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="table-responsive">
+                                    <table class="table table-dark table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">#</th>
+                                                <th scope="col">Entrantes</th>
+                                                <th scope="col">Primeros</th>
+                                                <th scope="col">Segundos</th>
+                                                <th scope="col">Postres</th>
+                                                <th scope="col">Bebidas</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>Otto</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>Jacob</td>
+                                                <td>Thornton</td>
+                                                <td>@fat</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>Larry the Bird</td>
+                                                <td>@twitter</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                                <td>@mdo</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-danger">Cerrar</button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- <a href="#" class="btn btn-danger">Saber más</a> -->
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <!--SEPARADOR-->
+
+    <div id="separator-ribbon">
+        <div class="content bg-danger">
+
+        </div>
+    </div>
+
+
+    <!--FOOTER-->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="#" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <img src="./img/apple.png" width="30" alt="">
+                </a>
+                <span class="text-muted">©2021 Kelvin Guerrero</span>
+            </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                    <a href="#" class="text-muted">
+                        <img src="./img/facebook.png" width="25" alt="">
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="#" class="text-muted">
+                        <img src="./img/instagram.png" width="25" alt="">
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="#" class="text-muted">
+                        <img src="./img/twitter.png" width="25" alt="">
+                    </a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+h1{
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.navbar-brand{
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.navbar-nav{
+    margin-left: auto !important;
+}
+
+.nav-link{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#ribbon{
+    background-color: #212529;
+    /* background-color: #212529; */
+}
+#ribbon::after{
+    content:  '';
+    background-color: transparent;
+    display: block;
+    height: 20px;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    left: auto;
+    margin-top: -40px;
+}
+#bienvenida{
+    background-color: #212529;
+    /* background-color: #fff; */
+    position: relative;
+    margin-top: -20px;
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+#bienvenida img{
+    position: relative;
+    margin-top: -30px;
+}
+
+.text-shadow{
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+#separator-ribbon{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+#separator-ribbon .content{
+    width: 150%;
+    height: 150px;
+    margin-left: -25%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.card{
+    margin-top: 15px !important;
+    
+}
+
+.galeria{
+    margin-top: 25px;
+    margin-bottom: 35px !important;
+}
+
+.footer{
+    background-color: #212529;
+    /* height: 120px; */
+}
+
+.carusel{
+    height: 100vh !important;
+    object-fit: cover;
+}
+
+.carousel-item img{
+    height: inherit;
+    box-sizing: border-box;
+}
+
+.carousel {
+    max-height: 85vh !important;
+    overflow: hidden !important;
+}
+
+.cuadro:hover{
+    animation: pulse; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+
+.nav-link{
+    color: #fff !important;
+}
+.active{
+    color: #e14b4b !important;
+}
+
+.fondo{
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/img/fondo.jpg");
+    background-position: 50%;
+}
+
+.tituloContacto{
+    font-size: 5vw;
+}
+
+p, h4 {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.card-title{
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.h3,.text-shadow{
+    font-family: 'Oswald', sans-serif !important;
+}
+
+.btn{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+/* .card{
+    background-color: #0000005e !important;
+} */
+.tarjetaFormulario{
+    background-color: #0000005e!important;
+}
