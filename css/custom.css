@@ -79,10 +79,10 @@ h1{
     /* height: 120px; */
 }
 
-.carusel{
+/* .carusel{
     height: 100vh !important;
     object-fit: cover;
-}
+} */
 
 .carousel-item img{
     height: inherit;
@@ -141,3 +141,7 @@ p, h4 {
 .tarjetaFormulario{
     background-color: #0000005e!important;
 }
+
+/* .btn-group{
+
+} */
