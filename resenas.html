@@ -10,7 +10,29 @@
     <link rel="stylesheet" href="./css/custom.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <script src="./js/funciones.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- <script src="./js/funciones.js"></script> -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //Boton añadir tarjeta
+            $('#btnGuardar').click(function () {
+                var nombreRestaurante = $('#nombreRestaurante').val()
+                var ubicacion = $('#ubicacion').val()
+                var tipo = $('#tipo').val()
+                var comentario = $('#floatingTextarea').val()
+                $('#card-1').removeClass('hidden')
+                $('.card-title').html(nombreRestaurante)
+                $('.card-text').html(comentario)
+
+                var contador = $('.card-1').length + 1;
+                // var bloque = ''
+            });
+
+
+
+        });
+    </script>
     <title>The Good Taste</title>
 </head>
 
@@ -58,92 +80,54 @@
                     <div class="modal-body">
                         <form action="#" method="post" enctype="multipart/form-data">
                             <div class="form-floating mb-3">
-                                <input type="text" name="nombreRestaurante" id="nombreRestaurante" class="form-control" id="floatingInput" placeholder="name@example.com">
-                                <label for="floatingInput"><i class="fas fa-store mx-2"></i></i>Nombre Restaurante</label>
+                                <input type="text" name="nombreRestaurante" id="nombreRestaurante" class="form-control"
+                                    id="floatingInput" placeholder="name@example.com">
+                                <label for="floatingInput"><i class="fas fa-store mx-2"></i></i>Nombre
+                                    Restaurante</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" name="ubicacion" id="ubicacion" class="form-control" id="floatingInput" placeholder="">
-                                <label for="floatingInput"><i class="fas fa-map-marked-alt mx-2"></i></i>Ubicacion</label>
+                                <input type="text" name="ubicacion" id="ubicacion" class="form-control"
+                                    id="floatingInput" placeholder="">
+                                <label for="floatingInput"><i
+                                        class="fas fa-map-marked-alt mx-2"></i></i>Ubicacion</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" name="tipo" id="tipo" class="form-control" id="floatingInput" placeholder="">
+                                <input type="text" name="tipo" id="tipo" class="form-control" id="floatingInput"
+                                    placeholder="">
                                 <label for="floatingInput"><i class="fas fa-utensils mx-2"></i>Estilo</label>
                             </div>
                             <div class="form-floating">
-                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                                <textarea class="form-control" placeholder="Leave a comment here"
+                                    id="floatingTextarea"></textarea>
                                 <label for="floatingTextarea"><i class="fas fa-edit mx-2"></i>Escribe la resena</label>
-                              </div>
-                              <div class="mb-3">
+                            </div>
+                            <div class="mb-3">
                                 <label for="formFile" class="form-label">Seleccione una foto</label>
                                 <input class="form-control" type="file" id="formFile">
-                              </div>
+                            </div>
                         </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-danger">Guardar</button>
+                        <button type="submit" id="btnGuardar" class="btn btn-danger">Guardar</button>
                     </div>
                 </div>
             </div>
         </div>
 
-
-        <button id="btn-edit" type="button" class="btn btn-danger" data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop2"><i class="fas fa-pen-square mx-2"></i>Editar</button>
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Editar Resena</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-danger">Guardar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <button id="btn-del" type="button" class="btn btn-danger" data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop3"><i
-                class="fas fa-minus-square mx-2"></i>Eliminar</button>
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Eliminar Resena</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-dark">Confirmar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!--TARJETAS-->
-    <div class="card galeria" style="width: 18rem;">
+    <div class="card galeria hidden" id="card-1" style="width: 18rem;">
         <img src="./img/hamburguesa2.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-danger">Go somewhere</a>
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-danger">Editar</a>
+            <a href="#" class="btn btn-danger">Ver</a>
         </div>
-      </div>
+    </div>
 
 
 

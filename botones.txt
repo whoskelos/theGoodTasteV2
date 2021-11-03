@@ -1,0 +1,45 @@
+        <button id="btn-edit" type="button" class="btn btn-danger" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop2"><i class="fas fa-pen-square mx-2"></i>Editar</button>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Editar Resena</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-danger">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <button id="btn-del" type="button" class="btn btn-danger" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop3"><i
+                class="fas fa-minus-square mx-2"></i>Eliminar</button>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Eliminar Resena</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-dark">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
