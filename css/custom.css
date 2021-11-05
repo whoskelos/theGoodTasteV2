@@ -145,3 +145,23 @@ p, h4 {
 .hidden{
     display: none;
 }
+
+.fondo-login{
+    background-image: url("/img/fondo-login.jpg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.texto-inicio-sesion{
+    color: #fff;
+}
+
+.contenedor-login{
+    background-color: #212529;
+}
+
+.form-label{
+    color: #fff !important;
+}

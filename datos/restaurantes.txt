@@ -1,0 +1,5 @@
+{"restaurantes":[
+    {"nombre":"Goiko", "ubicacion":Alcorcon" "tipo":"Hamburguesería","resena":"La ambientación del local es fascinante, el diseño del lugar agrada mucho, la comida muy sabrosa, de mis sitios favoritos.","imagen":"../img/hamburguesa.jpg"},
+    {"nombre":"La federala","ubicacion":"Alcorcon","tipo":"Mexicano","resena":"Restaurante con una ambientacion muy fiel a la mexicana, mucha variedad en el menu, la atención rapida"},
+    {"nombre":"El Solarino","ubicacion":"Moraleja de Enmedio","tipo":"Restaurante","resena","Restaurante bastante grande, tiene una terraza en la planta superior muy bonita,las gambas al ajillo me gustaron mucho"}
+]}
