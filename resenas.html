@@ -12,26 +12,7 @@
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <!-- <script src="./js/funciones.js"></script> -->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            //Boton añadir tarjeta
-            $('#btnGuardar').click(function () {
-                var nombreRestaurante = $('#nombreRestaurante').val()
-                var ubicacion = $('#ubicacion').val()
-                var tipo = $('#tipo').val()
-                var comentario = $('#floatingTextarea').val()
-                $('#card-1').removeClass('hidden')
-                $('.card-title').html(nombreRestaurante)
-                $('.card-text').html(comentario)
-
-                var contador = $('.card-1').length + 1;
-                // var bloque = ''
-            });
-
-
-
-        });
+    <script type="text/javascript" src="./js/funciones.js"></script>
     </script>
     <title>The Good Taste</title>
 </head>
@@ -118,17 +99,19 @@
     </div>
 
     <!--TARJETAS-->
-    <div class="card galeria hidden" id="card-1" style="width: 18rem;">
-        <img src="./img/hamburguesa2.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            <a href="#" class="btn btn-danger">Editar</a>
-            <a href="#" class="btn btn-danger">Ver</a>
+    <div id="tarjetas">
+        <div class="card galeria hidden" id="card-1" style="width: 18rem;">
+            <img src="./img/hamburguesa2.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                    card's
+                    content.</p>
+                <a href="#" class="btn btn-danger">Editar</a>
+                <a href="#" class="btn btn-danger">Ver</a>
+            </div>
         </div>
     </div>
-
 
 
 
