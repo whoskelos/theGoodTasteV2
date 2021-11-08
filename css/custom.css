@@ -1,28 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-h1{
-    font-family: 'Oswald', sans-serif !important;
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+h1 {
+    font-family: "Oswald", sans-serif !important;
 }
 
-.navbar-brand{
-    font-family: 'Oswald', sans-serif !important;
+.navbar-brand {
+    font-family: "Oswald", sans-serif !important;
 }
 
-.navbar-nav{
+.navbar-nav {
     margin-left: auto !important;
 }
 
-.nav-link{
-    font-family: 'Montserrat', sans-serif;
+.nav-link {
+    font-family: "Montserrat", sans-serif;
 }
 
-#ribbon{
+#ribbon {
     background-color: #212529;
     /* background-color: #212529; */
 }
-#ribbon::after{
-    content:  '';
+#ribbon::after {
+    content: "";
     background-color: transparent;
     display: block;
     height: 20px;
@@ -32,7 +32,7 @@ h1{
     left: auto;
     margin-top: -40px;
 }
-#bienvenida{
+#bienvenida {
     background-color: #212529;
     /* background-color: #fff; */
     position: relative;
@@ -41,22 +41,22 @@ h1{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
-#bienvenida img{
+#bienvenida img {
     position: relative;
     margin-top: -30px;
 }
 
-.text-shadow{
+.text-shadow {
     text-shadow: 0 3px 3px rgba(0, 0, 0, 0.6);
 }
 
-#separator-ribbon{
+#separator-ribbon {
     width: 100%;
     overflow: hidden;
     position: relative;
     z-index: 2;
 }
-#separator-ribbon .content{
+#separator-ribbon .content {
     width: 150%;
     height: 150px;
     margin-left: -25%;
@@ -64,17 +64,16 @@ h1{
     border-bottom-right-radius: 50%;
 }
 
-.card{
+.card {
     margin-top: 15px !important;
-    
 }
 
-.galeria{
+.galeria {
     margin-top: 25px;
     margin-bottom: 35px !important;
 }
 
-.footer{
+.footer {
     background-color: #212529;
     /* height: 120px; */
 }
@@ -84,7 +83,7 @@ h1{
     object-fit: cover;
 } */
 
-.carousel-item img{
+.carousel-item img {
     height: inherit;
     box-sizing: border-box;
 }
@@ -94,19 +93,19 @@ h1{
     overflow: hidden !important;
 }
 
-.cuadro:hover{
+.cuadro:hover {
     animation: pulse; /* referring directly to the animation's @keyframe declaration */
     animation-duration: 2s; /* don't forget to set a duration! */
 }
 
-.nav-link{
+.nav-link {
     color: #fff !important;
 }
-.active{
+.active {
     color: #e14b4b !important;
 }
 
-.fondo{
+.fondo {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -114,39 +113,41 @@ h1{
     background-position: 50%;
 }
 
-.tituloContacto{
+.tituloContacto {
     font-size: 5vw;
 }
 
-p, h4 {
-    font-family: 'Montserrat', sans-serif !important;
+p,
+h4 {
+    font-family: "Montserrat", sans-serif !important;
 }
 
-.card-title{
-    font-family: 'Oswald', sans-serif !important;
+.card-title {
+    font-family: "Oswald", sans-serif !important;
 }
 
-.h3,.text-shadow{
-    font-family: 'Oswald', sans-serif !important;
+.h3,
+.text-shadow {
+    font-family: "Oswald", sans-serif !important;
 }
 
-.btn{
-    font-family: 'Montserrat', sans-serif;
+.btn {
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
 }
 
 /* .card{
     background-color: #0000005e !important;
 } */
-.tarjetaFormulario{
-    background-color: #0000005e!important;
+.tarjetaFormulario {
+    background-color: #0000005e !important;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-.fondo-login{
+#fondo-login {
     background-image: url("/img/fondo-login.jpg");
     height: 100vh;
     background-repeat: no-repeat;
@@ -154,14 +155,42 @@ p, h4 {
     background-position: 50%;
 }
 
-.texto-inicio-sesion{
-    color: #fff;
+#fondo-login:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
-.contenedor-login{
+.texto-login {
+    font-size: 5vw;
+    position: relative;
+}
+.texto-login {
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
+}
+.login-form {
+    position: relative;
     background-color: #212529;
 }
 
-.form-label{
+.texto-inicio-sesion {
+    color: #fff;
+}
+
+.contenedor-login {
+    height: 100vh !important;
+}
+
+.form-label {
     color: #fff !important;
 }
+.color-tarjeta{
+    background-color: #f4f4f4;
+}
+
+
