@@ -5,17 +5,15 @@ window.onload = function () {
 let listaRestaurantes = [];
 
 function pedirRestaurantes() {
-    if (localStorage.getItem('datos') == null) {
+    if (localStorage.getItem("datos") == null) {
         $.get("../datos/restaurantes.txt", {}, (respuesta) => {
             listaRestaurantes = JSON.parse(respuesta);
             cargarTarjetas(listaRestaurantes);
-        });    
+        });
     } else {
-        listaRestaurantes = JSON.parse(localStorage.getItem('datos'));
-        console.log(listaRestaurantes);
+        listaRestaurantes = JSON.parse(localStorage.getItem("datos"));
         cargarTarjetas(listaRestaurantes);
     }
-    
 }
 
 function cargarTarjetas(lista) {
@@ -57,10 +55,14 @@ function cargarTarjetas(lista) {
         btnEliminar.classList.add("btn", "btn-danger");
         btnEliminar.id = "btn-eliminar";
         btnEliminar.innerHTML = "<i class='fas fa-trash-alt mx-1'></i>Eliminar";
-        btnEliminar.addEventListener("click",(function(x) {
-            return ()=> eliminar(x)
-        })(tarjeta));
         cuerpoTarjeta.appendChild(btnEliminar);
+        //le anadimos la funcion eliminar en el evento click
+        btnEliminar.addEventListener("click", function () {
+            var indice = listaRestaurantes.indexOf(restaurante);
+            if (indice > -1) {
+                listaRestaurantes.splice(indice, 1);
+            }
+        });
     });
 }
 
@@ -85,18 +87,22 @@ function anadirTarjeta() {
     var resena = document.getElementById("floatingTextarea").value;
     var imagenRestaurante = document.getElementById("formFile").files[0].name;
 
-    // recojo datos del restaurante nuevo añadido
-    var restaurantesNuevos = {"nombre":nombreRestaurante,"ubicacion":ubicacionRestaurante,"tipo":tipoRestaurante,"resena":resena,"imagen":"../img/"+imagenRestaurante};
+    // guardo datos del restaurante nuevo añadido en forma de objeto
+    var restaurantesNuevo = {
+        nombre: nombreRestaurante,
+        ubicacion: ubicacionRestaurante,
+        tipo: tipoRestaurante,
+        resena: resena,
+        imagen: "../img/" + imagenRestaurante,
+    };
 
     //envio datos al array
-    listaRestaurantes.push(restaurantesNuevos);
-    
+    listaRestaurantes.push(restaurantesNuevo);
+
     //Mi local Storage
     var miStorage = window.localStorage;
-    localStorage.setItem('datos',JSON.stringify(listaRestaurantes));
-    var guardado = JSON.parse(localStorage.getItem('datos'));
-
-    
+    localStorage.setItem("datos", JSON.stringify(listaRestaurantes));
+    var guardado = JSON.parse(localStorage.getItem("datos"));
 
     //localizo div donde van a ir las tarjetas
     var divTarjetas = document.getElementById("tarjetas");
@@ -109,7 +115,7 @@ function anadirTarjeta() {
     divTarjetas.appendChild(tarjeta);
     //añado imagen de la tarjeta
     var imagen = document.createElement("img");
-    imagen.src = "./img/"+imagenRestaurante;
+    imagen.src = "./img/" + imagenRestaurante;
     imagen.className = "card-img-top";
     tarjeta.appendChild(imagen);
     //creo div con la clase card-body
@@ -139,24 +145,17 @@ function anadirTarjeta() {
     btnEliminar.innerHTML = "<i class='fas fa-trash-alt mx-1'></i>Eliminar";
     cuerpoTarjeta.appendChild(btnEliminar);
     //le anadimos la funcion eliminar en el evento click
-    btnEliminar.addEventListener("click",(function(x) {
-        return ()=> eliminar(x)
-    })(tarjeta));
+    btnEliminar.addEventListener("click", function () {
+        var indice = listaRestaurantes.indexOf(restaurantesNuevo);
+        if (indice > -1) {
+            listaRestaurantes.splice(indice, 1);
+        }
+    });
 }
 
-function eliminar(tarjeta) {
-    var divTarjetas = document.querySelector("#tarjetas");
-    var tarjetaEliminada = divTarjetas.removeChild(tarjeta);
-}
+// function eliminar(indice) {
+//     console.log(listaRestaurantes);
+// }
 
 // localizamos boton buscar
 var btnBuscar = document.querySelector("#btn-buscar");
-
-// function buscarRestaurante() {
-//     let filtro = document.getElementById('palabraParaBuscar').value.trim().toLowerCase();
-//     if (filtro == "") {
-//         filtro.innerHTML = "No se admiten cadenas vacias";
-//     }else {
-//         let listaFiltrada = 
-//     }
-// }
