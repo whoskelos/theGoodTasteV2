@@ -5,10 +5,17 @@ window.onload = function () {
 let listaRestaurantes = [];
 
 function pedirRestaurantes() {
-    $.get("../datos/restaurantes.txt", {}, (respuesta) => {
-        listaRestaurantes = JSON.parse(respuesta);
+    if (localStorage.getItem('datos') == null) {
+        $.get("../datos/restaurantes.txt", {}, (respuesta) => {
+            listaRestaurantes = JSON.parse(respuesta);
+            cargarTarjetas(listaRestaurantes);
+        });    
+    } else {
+        listaRestaurantes = JSON.parse(localStorage.getItem('datos'));
+        console.log(listaRestaurantes);
         cargarTarjetas(listaRestaurantes);
-    });
+    }
+    
 }
 
 function cargarTarjetas(lista) {
@@ -69,25 +76,27 @@ function recogerDatos() {
     btnGuardarTarjeta.addEventListener("click", anadirTarjeta);
 }
 
-//Mi local Storage
-miStorage = window.localStorage;
-
 //con esta funcion generamos una nueva tarjeta con los datos recogidos del input del modal
 function anadirTarjeta() {
     //recojo datos de los inputs
     var nombreRestaurante = document.getElementById("nombreRestaurante").value;
-    localStorage.setItem('Nombre Restaurante',nombreRestaurante);
     var ubicacionRestaurante = document.getElementById("ubicacion").value;
     var tipoRestaurante = document.getElementById("tipo").value;
-    var nombreRestaurante = document.getElementById("nombreRestaurante").value;
     var resena = document.getElementById("floatingTextarea").value;
     var imagenRestaurante = document.getElementById("formFile").files[0].name;
+
+    // recojo datos del restaurante nuevo añadido
+    var restaurantesNuevos = {"nombre":nombreRestaurante,"ubicacion":ubicacionRestaurante,"tipo":tipoRestaurante,"resena":resena,"imagen":"../img/"+imagenRestaurante};
+
+    //envio datos al array
+    listaRestaurantes.push(restaurantesNuevos);
     
-    //anado datos al fichero JSON
-    // $.get("../datos/restaurantes.txt", {}, (respuesta) => {
-    //     listaRestaurantes = JSON.parse(respuesta);
-    //     // cargarTarjetas(listaRestaurantes);
-    // });
+    //Mi local Storage
+    var miStorage = window.localStorage;
+    localStorage.setItem('datos',JSON.stringify(listaRestaurantes));
+    var guardado = JSON.parse(localStorage.getItem('datos'));
+
+    
 
     //localizo div donde van a ir las tarjetas
     var divTarjetas = document.getElementById("tarjetas");
@@ -139,3 +148,15 @@ function eliminar(tarjeta) {
     var divTarjetas = document.querySelector("#tarjetas");
     var tarjetaEliminada = divTarjetas.removeChild(tarjeta);
 }
+
+// localizamos boton buscar
+var btnBuscar = document.querySelector("#btn-buscar");
+
+// function buscarRestaurante() {
+//     let filtro = document.getElementById('palabraParaBuscar').value.trim().toLowerCase();
+//     if (filtro == "") {
+//         filtro.innerHTML = "No se admiten cadenas vacias";
+//     }else {
+//         let listaFiltrada = 
+//     }
+// }

@@ -7,4 +7,9 @@ class restaurante{
         this.imagen = imagen;
 
     }
+
+    setValores(nombre,reseña){
+        this.nombre = nombre;
+        this.resena = reseña;
+    }
 }
