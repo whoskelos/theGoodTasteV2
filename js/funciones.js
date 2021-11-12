@@ -150,12 +150,17 @@ function anadirTarjeta() {
         if (indice > -1) {
             listaRestaurantes.splice(indice, 1);
         }
+        divTarjetas.removeChild(tarjeta);
     });
+    //cerramos ventana del formulario
+    $("#cerrar").click();
+    $("#cerrar").on('click');
 }
 
-// function eliminar(indice) {
-//     console.log(listaRestaurantes);
-// }
+function eliminar(tarjeta) {
+    divPadre = document.getElementById('tarjetas');
+    console.log(divPadre);
+}
 
 // localizamos boton buscar
 var btnBuscar = document.querySelector("#btn-buscar");
