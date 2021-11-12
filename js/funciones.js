@@ -62,7 +62,12 @@ function cargarTarjetas(lista) {
             if (indice > -1) {
                 listaRestaurantes.splice(indice, 1);
             }
+            localStorage.setItem("datos", JSON.stringify(listaRestaurantes));
         });
+            //añadimos funcion para llamar a la funcion eliminar que eliminará el div
+         btnEliminar.addEventListener("click",(function(x) {
+            return ()=> eliminar(x)
+        })(tarjeta));
     });
 }
 
@@ -144,23 +149,42 @@ function anadirTarjeta() {
     btnEliminar.id = "btn-eliminar";
     btnEliminar.innerHTML = "<i class='fas fa-trash-alt mx-1'></i>Eliminar";
     cuerpoTarjeta.appendChild(btnEliminar);
-    //le anadimos la funcion eliminar en el evento click
+    //añadimo funcion al boton eliminar para eliminar del array el objeto creado
     btnEliminar.addEventListener("click", function () {
         var indice = listaRestaurantes.indexOf(restaurantesNuevo);
         if (indice > -1) {
             listaRestaurantes.splice(indice, 1);
         }
-        divTarjetas.removeChild(tarjeta);
+        localStorage.setItem("datos", JSON.stringify(listaRestaurantes));
     });
+    //añadimos funcion para llamar a la funcion eliminar que eliminará el div
+    btnEliminar.addEventListener("click",(function(x) {
+        return ()=> eliminar(x)
+    })(tarjeta));
+
+
     //cerramos ventana del formulario
     $("#cerrar").click();
     $("#cerrar").on('click');
 }
 
 function eliminar(tarjeta) {
-    divPadre = document.getElementById('tarjetas');
-    console.log(divPadre);
+    var divTarjetas = document.querySelector("#tarjetas");
+    var tarjetaEliminada = divTarjetas.removeChild(tarjeta);
 }
 
 // localizamos boton buscar
-var btnBuscar = document.querySelector("#btn-buscar");
+// var btnBuscar = document.querySelector("#btn-buscar");
+// var texto = document.querySelector("#palabraParaBuscar");
+// if (document.readyState) {
+//     btnBuscar.addEventListener("click",(function (x) {
+//         return ()=> buscar(x);
+//     })(texto));    
+// }
+
+//creamos funcion para buscar
+
+// function buscar(textoAbuscar) {
+//     var restaurantesFiltrados = listaRestaurantes.filter(filtro => filtro == textoAbuscar);
+//     console.log(restaurantesFiltrados);
+// }
