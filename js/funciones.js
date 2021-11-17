@@ -1,7 +1,9 @@
 window.onload = function () {
     pedirRestaurantes();
     mostrarAnadir();
+    btnBuscar();
 };
+
 let listaRestaurantes = [];
 
 function pedirRestaurantes() {
@@ -173,18 +175,15 @@ function eliminar(tarjeta) {
     var tarjetaEliminada = divTarjetas.removeChild(tarjeta);
 }
 
-// localizamos boton buscar
-// var btnBuscar = document.querySelector("#btn-buscar");
-// var texto = document.querySelector("#palabraParaBuscar");
-// if (document.readyState) {
-//     btnBuscar.addEventListener("click",(function (x) {
-//         return ()=> buscar(x);
-//     })(texto));    
-// }
+//boton buscar y le añadimos evento de la funcion
+
+function btnBuscar() {
+    var btnBuscar = document.querySelector("#btn-buscar");
+    btnBuscar.addEventListener("click",buscar);
+}
 
 //creamos funcion para buscar
-
-// function buscar(textoAbuscar) {
-//     var restaurantesFiltrados = listaRestaurantes.filter(filtro => filtro == textoAbuscar);
-//     console.log(restaurantesFiltrados);
-// }
+function buscar() {
+    var textoAbuscar = document.querySelector("#palabraParaBuscar");
+    console.log(textoAbuscar.value);  
+}
