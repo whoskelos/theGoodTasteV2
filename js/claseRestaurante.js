@@ -8,8 +8,7 @@ class restaurante{
 
     }
 
-    setValores(nombre,reseña){
-        this.nombre = nombre;
-        this.resena = reseña;
+    getResena(){
+        console.log("El comentario del restaurante " +nombre+ "es: " +resena);
     }
 }

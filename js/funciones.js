@@ -179,11 +179,27 @@ function eliminar(tarjeta) {
 
 function btnBuscar() {
     var btnBuscar = document.querySelector("#btn-buscar");
-    btnBuscar.addEventListener("click",buscar);
+    btnBuscar.addEventListener("click", buscar);
+}
+
+function limpiarTarjetas(){
+    let tarjetas = Array.prototype.slice.call(document.getElementsByClassName("card"),0);
+    for(element of tarjetas){
+        element.remove();
+    }
 }
 
 //creamos funcion para buscar
 function buscar() {
+    limpiarTarjetas();
     var textoAbuscar = document.querySelector("#palabraParaBuscar");
-    console.log(textoAbuscar.value);  
+    let filtro = textoAbuscar.value.trim().toLowerCase();
+    if (filtro == "") {
+        cargarTarjetas(listaRestaurantes);
+    } else {
+        let listaFiltrada = listaRestaurantes.filter((restaurante) =>
+        restaurante.nombre.toLowerCase().includes(filtro)
+    );
+    cargarTarjetas(listaFiltrada);
+    }
 }

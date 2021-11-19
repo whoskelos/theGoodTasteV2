@@ -22,33 +22,41 @@
         <div class="contenedor-login row d-flex flex-column flex-sm-row">
             <!--PARTE IZQUIERDA DEL LOGIN CON EL FONDO Y EL TEXTO DE INICIAR SESION-->
             <div id="fondo-login" class="col bg-dark text-light d-flex align-items-center justify-content-center">
-                <p class="texto-login">Iniciar Sesion</p>
+                <p class="texto-login">Registro</p>
             </div>
             <!--PARTE DERECHA DEL LOGIN CON EL FORMULARIO DE USUARIO-->
             <div class="col text-light login-form d-flex align-items-center justify-content-center">
                 <div class="col-md-6 mt-3">
                     <div class="card tarjetaLogin ">
                         <div class="card-body">
-                            <h3 class="text-center text-dark"><strong>Iniciar Sesion</strong></h3>
+                            <h3 class="text-center text-dark"><strong>Registro</strong></h3>
                             <hr>
 
-                            <form action="#" method="post">
+                            <form action="#" method="post" onsubmit="return comprobarErrores()">
                                 <div class="form-floating mb-3">
-                                    <input type="text" name="usuario" id="usuario" class="form-control"
-                                        id="floatingInput" placeholder="name@example.com">
+                                    <input type="email" name="email" id="emailNuevo" class="form-control" id="floatingInput"
+                                        placeholder="name@example.com">
+                                    <label for="floatingInput" class="text-dark"><i class="fas fa-paper-plane mx-2"></i>Correo
+                                        Electronico</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" name="usuario" id="usuarioNuevo" class="form-control"
+                                        id="floatingInput" placeholder="">
                                     <label for="floatingInput" class="text-dark"><i
                                             class="fas fa-user mx-2"></i>Usuario</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <input type="password" name="password" id="password" class="form-control"
-                                        id="floatingInput" placeholder="name@example.com">
-                                    <label for="floatingInput" class="text-dark"><i class="fas fa-key mx-2"></i>Contrasena</label>
+                                    <input type="passwordNueva" name="password1" id="password1" class="form-control"
+                                        id="floatingInput" placeholder="">
+                                    <label for="floatingInput" class="text-dark"><i class="fas fa-key mx-2"></i>Contraseña</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="passwordNueva" name="password2" id="password2" class="form-control"
+                                        id="floatingInput" placeholder="">
+                                    <label for="floatingInput" class="text-dark"><i class="fas fa-key mx-2"></i>Confirmar Contraseña</label>
                                 </div>
                                 <div class="text-center text-md-start my-2">
-                                    <button class="btn btn-danger" type="button" id="btnAcceder">
-                                        Acceder
-                                    </button>
-                                    <button class="btn btn-secondary my-2" type="button" id="btnRegistro">
+                                    <button class="btn btn-danger" type="submit" id="btnRegistrar">
                                         Registrarse
                                     </button>
                                 </div>
