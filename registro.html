@@ -10,54 +10,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script type="text/javascript" src="./js/login.js"></script>
     <link rel="stylesheet" href="./css/custom.css">
-    <title>Iniciar Sesion</title>
+    <script src="./js/validaciones.js"></script>
+    <title>The Good Taste</title>
 </head>
 
 <body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./img/apple.png" alt="logo de la web" width="50">
+                TGT
+            </a>
 
-    <div class="container-fluid">
-        <div class="contenedor-login row d-flex flex-column flex-sm-row">
-            <!--PARTE IZQUIERDA DEL LOGIN CON EL FONDO Y EL TEXTO DE INICIAR SESION-->
-            <div id="fondo-login" class="col bg-dark text-light d-flex align-items-center justify-content-center">
-                <p class="texto-login">Registro</p>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./resenas.html">Reseñas</a></li>
+                </ul>
             </div>
-            <!--PARTE DERECHA DEL LOGIN CON EL FORMULARIO DE USUARIO-->
-            <div class="col text-light login-form d-flex align-items-center justify-content-center">
+        </div>
+    </nav>
+
+
+    <section class="main d-flex" id="fondo-registro">
+        <div class="container d-flex justify-content-center align-items-center" >
+            <div class="row d-flex justify-content-center align-items-center" >
+                <div class="col-md-6 text-white">
+                    <h1 class="tituloContacto d-none d-md-block">Unirse a la comunidad</h1>
+                    <hr class="bg-light d-none d-md-block">
+                    <p class="h4 text-center text-md-start">Somos amantes de la comida, visitamos aquellos lugares que
+                        mas se comentan para asi poder publicar nuestros comentarios sobre el sitio. En el apartado
+                        resenas tienes disponible la carta del sitio que hemos visitado.</p>
+                    <div class="text-center text-md-start">
+                        <!-- <button class="btn btn-danger btn-lg">
+                            Adelante
+                            <i class="fas fa-play mx-2"></i>
+                        </button> -->
+                    </div>
+                </div>
+
+                <!-- formulario -->
                 <div class="col-md-6 mt-3">
-                    <div class="card tarjetaLogin ">
+                    <div class="card tarjetaFormulario">
                         <div class="card-body">
-                            <h3 class="text-center text-dark"><strong>Registro</strong></h3>
+                            <h3 class="text-center text-light"><strong>Registro</strong></h3>
                             <hr>
 
-                            <form action="#" method="post" onsubmit="return comprobarErrores()">
+                            <form action="#" method="post">
                                 <div class="form-floating mb-3">
-                                    <input type="email" name="email" id="emailNuevo" class="form-control" id="floatingInput"
-                                        placeholder="name@example.com">
-                                    <label for="floatingInput" class="text-dark"><i class="fas fa-paper-plane mx-2"></i>Correo
+                                    <input type="email" name="emailNuevo" id="email" class="form-control" id="floatingInput">
+                                    <label for="floatingInput"><i class="fas fa-paper-plane mx-2"></i>Correo
                                         Electronico</label>
                                 </div>
+
                                 <div class="form-floating mb-3">
-                                    <input type="text" name="usuario" id="usuarioNuevo" class="form-control"
-                                        id="floatingInput" placeholder="">
-                                    <label for="floatingInput" class="text-dark"><i
-                                            class="fas fa-user mx-2"></i>Usuario</label>
+                                    <input type="text" name="usuarioNuevo" id="usuarioNuevo" class="form-control"
+                                        id="floatingInput">
+                                    <label for="floatingInput"><i class="fas fa-user mx-2"></i>Nombre de usuario</label>
                                 </div>
+
                                 <div class="form-floating mb-3">
-                                    <input type="passwordNueva" name="password1" id="password1" class="form-control"
-                                        id="floatingInput" placeholder="">
-                                    <label for="floatingInput" class="text-dark"><i class="fas fa-key mx-2"></i>Contraseña</label>
+                                    <input type="password" name="password1" id="password1" class="form-control"
+                                        id="floatingInput">
+                                    <label for="floatingInput"><i class="fas fa-key mx-2"></i> Contraseña</label>
                                 </div>
+
                                 <div class="form-floating mb-3">
-                                    <input type="passwordNueva" name="password2" id="password2" class="form-control"
-                                        id="floatingInput" placeholder="">
-                                    <label for="floatingInput" class="text-dark"><i class="fas fa-key mx-2"></i>Confirmar Contraseña</label>
+                                    <input type="password" name="password2" id="password2" class="form-control"
+                                        id="floatingInput">
+                                    <label for="floatingInput"><i class="fas fa-key mx-2"></i>Confirmar Contraseña</label>
                                 </div>
+
                                 <div class="text-center text-md-start my-2">
-                                    <button class="btn btn-danger" type="submit" id="btnRegistrar">
-                                        Registrarse
+                                    <button class="btn btn-danger" type="">
+                                        Enviar
                                     </button>
                                 </div>
                             </form>
@@ -67,6 +101,36 @@
                 </div>
             </div>
         </div>
+    </section>
+
+
+    <!--FOOTER-->
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="#" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <img src="./img/apple.png" width="30" alt="">
+                </a>
+                <span class="text-muted">©2021 Kelvin Guerrero</span>
+            </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                    <a href="#" class="text-muted">
+                        <img src="./img/facebook.png" width="25" alt="">
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="#" class="text-muted">
+                        <img src="./img/instagram.png" width="25" alt="">
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a href="#" class="text-muted">
+                        <img src="./img/twitter.png" width="25" alt="">
+                    </a>
+                </li>
+            </ul>
+        </footer>
     </div>
 
 
