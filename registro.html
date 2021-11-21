@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/custom.css">
-    <script src="./js/validaciones.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="./js/claseUsuario.js"></script>
+    <script src="./js/registrarUsuarios.js"></script>
+    <!-- <script src="./js/login.js"></script> -->
     <title>The Good Taste</title>
 </head>
 
@@ -32,8 +36,8 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./resenas.html">Reseñas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    <li class="nav-item" id="resenasItem"><a class="nav-link" href="./resenas.html">Reseñas</a></li>
                 </ul>
             </div>
         </div>
@@ -41,14 +45,15 @@
 
 
     <section class="main d-flex" id="fondo-registro">
-        <div class="container d-flex justify-content-center align-items-center" >
-            <div class="row d-flex justify-content-center align-items-center" >
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="row d-flex justify-content-center align-items-center">
                 <div class="col-md-6 text-white">
-                    <h1 class="tituloContacto d-none d-md-block">Unirse a la comunidad</h1>
+                    <h1 class="tituloRegistro d-none d-md-block">Unirse a la comunidad</h1>
                     <hr class="bg-light d-none d-md-block">
                     <p class="h4 text-center text-md-start">Somos amantes de la comida, visitamos aquellos lugares que
-                        mas se comentan para asi poder publicar nuestros comentarios sobre el sitio. En el apartado
-                        resenas tienes disponible la carta del sitio que hemos visitado.</p>
+                        mas se comentan para asi poder publicar nuestros comentarios sobre el sitio. Una vez te
+                        registres
+                        tendras tu apartado "Resenas" y podras publicar tus visitas</p>
                     <div class="text-center text-md-start">
                         <!-- <button class="btn btn-danger btn-lg">
                             Adelante
@@ -59,39 +64,52 @@
 
                 <!-- formulario -->
                 <div class="col-md-6 mt-3">
-                    <div class="card tarjetaFormulario">
+                    <div class="card">
                         <div class="card-body">
-                            <h3 class="text-center text-light"><strong>Registro</strong></h3>
+                            <h3 class="text-center text-dark"><strong>Registro</strong></h3>
                             <hr>
-
                             <form action="#" method="post">
                                 <div class="form-floating mb-3">
-                                    <input type="email" name="emailNuevo" id="email" class="form-control" id="floatingInput">
+                                    <input type="text" name="nombreCompleto" id="nombreCompleto" class="form-control"
+                                        id="floatingInput" placeholder="name@example.com" required minlength="6">
+                                    <label for="floatingInput" class="text-dark"><i class="fas fa-user mx-2"></i>Nombre
+                                        Completo</label>
+                                </div>
+
+                                <div class="form-floating mb-3">
+                                    <input type="email" name="emailNuevo" id="emailNuevo" class="form-control" id="floatingInput"
+                                        placeholder="name@example.com" required minlength="6">
                                     <label for="floatingInput"><i class="fas fa-paper-plane mx-2"></i>Correo
                                         Electronico</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                     <input type="text" name="usuarioNuevo" id="usuarioNuevo" class="form-control"
-                                        id="floatingInput">
-                                    <label for="floatingInput"><i class="fas fa-user mx-2"></i>Nombre de usuario</label>
+                                        id="floatingInput" placeholder="name@example.com" required minlength="4">
+                                    <label for="floatingInput" class="text-dark"><i
+                                            class="fas fa-user mx-2"></i>Usuario</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                     <input type="password" name="password1" id="password1" class="form-control"
-                                        id="floatingInput">
-                                    <label for="floatingInput"><i class="fas fa-key mx-2"></i> Contraseña</label>
+                                        id="floatingInput" placeholder="name@example.com" required>
+                                    <label for="floatingInput" class="text-dark"><i
+                                            class="fas fa-key mx-2"></i>Contrasena</label>
                                 </div>
 
                                 <div class="form-floating mb-3">
                                     <input type="password" name="password2" id="password2" class="form-control"
-                                        id="floatingInput">
-                                    <label for="floatingInput"><i class="fas fa-key mx-2"></i>Confirmar Contraseña</label>
+                                        id="floatingInput" placeholder="name@example.com" required>
+                                    <label for="floatingInput" class="text-dark"><i
+                                            class="fas fa-key mx-2"></i>Confirmar Contrasena</label>
                                 </div>
 
                                 <div class="text-center text-md-start my-2">
-                                    <button class="btn btn-danger" type="">
-                                        Enviar
+                                    <button class="btn btn-danger" type="button" id="btnRegistrar">
+                                        Registrarse
+                                    </button>
+                                    <button class="btn btn-secondary" type="reset" id="btnReset">
+                                        Limpiar
                                     </button>
                                 </div>
                             </form>

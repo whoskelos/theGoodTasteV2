@@ -1,10 +1,9 @@
 class usuario{
-    constructor (dni,nombre,apellidos,edad,ciudad){
-        this.dni = dni || "00000000X";
+    constructor (nombre,email,user,pass){
         this.nombre = nombre || "sin nombre";
-        this.apellidos = apellidos || "sin apellido";
-        this.edad = edad || "sin edad";
-        this.ciudad = ciudad || "sin ciudad";
+        this.email = email || "email";
+        this.user = user || "sin nombre usuario";
+        this.pass = pass || "sin contrasena";
     }
 
     getEdad(){

@@ -78,11 +78,6 @@ h1 {
     /* height: 120px; */
 }
 
-/* .carusel{
-    height: 100vh !important;
-    object-fit: cover;
-} */
-
 .carousel-item img {
     height: inherit;
     box-sizing: border-box;
@@ -105,24 +100,14 @@ h1 {
     color: #e14b4b !important;
 }
 
-.fondo {
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("/img/fondo.jpg");
-    background-position: 50%;
-}
-
-/* #fondo-registro {
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("/img/fondo-login.jpg");
-    background-position: 50%;
-} */
-
 .tituloContacto {
     font-size: 5vw;
+}
+
+.tituloRegistro {
+    font-size: 5vw;
+    animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+    animation-duration: 2s; /* don't forget to set a duration! */
 }
 
 p,
@@ -156,16 +141,13 @@ h4 {
 }
 
 #fondo-registro {
-    background-color: rgba(0, 0, 0, 0.8);
-    background-image: url("/img/fondo-login.jpg");
+    /* background-color: rgba(0, 0, 0, 0.8);
+    background-image: url("/img/fondo-login.jpg"); */
+    background-color: #212529e0;
     height: 100vh;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-size: cover;
-    background-position: 50%;
-}
-
-#fondo-registro:before {
-
+    background-position: 50%; */
 }
 
 .texto-login {
@@ -192,8 +174,14 @@ h4 {
 .form-label {
     color: #fff !important;
 }
-.color-tarjeta{
+.color-tarjeta {
     background-color: #f4f4f4;
 }
 
+.errorPassword{
+    border: 1px solid rgb(117, 11, 11);
+}
 
+.hidden{
+    display: none;
+}
