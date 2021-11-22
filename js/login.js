@@ -43,8 +43,9 @@ function iniciarSesion(usuario, pass) {
 }
 
 function cargarHomeUsuario(usuario) {
-    location.href = "../index.html";
-    console.log(document.getElementById("loguearse"));
+    // location.href = "../index.html";
+    // console.log(document.getElementById("loguearse"));
+    console.log("Aqui debo llevarte al perfil usuario");
     $("#loguearse").empty();
     $("#loguearse").text(usuario);
 

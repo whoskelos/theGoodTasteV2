@@ -1,0 +1,8 @@
+[
+{"nombre":"Admin Web","email":"admin@tgt.com","user":"admin","pass":"admin"
+},
+{"nombre":"Kelvin Guerrero","email":"kelvin@tgt.com","user":"kelvin","pass":"admin"
+},
+{"nombre":"Miguel Mite","email":"miguel@tgt.com","user":"miguel","pass":"admin"
+}
+]

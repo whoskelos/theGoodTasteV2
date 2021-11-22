@@ -1,3 +1,0 @@
-,
-    {"nombre":"La federala","ubicacion":"Alcorcon","tipo":"Mexicano","resena":"Restaurante con una ambientacion muy fiel a la mexicana, mucha variedad en el menu, la atención rapida"},
-    {"nombre":"El Solarino","ubicacion":"Moraleja de Enmedio","tipo":"Restaurante","resena","Restaurante bastante grande, tiene una terraza en la planta superior muy bonita,las gambas al ajillo me gustaron mucho"}
