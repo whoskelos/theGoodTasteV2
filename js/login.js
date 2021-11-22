@@ -22,17 +22,20 @@ function comprobarUsuarios() {
         let usuarioAbuscar = document.getElementById("usuario").value;
         let usuarioEncontrado = listaUsuarios.filter((usuarios) => {
             if (usuarios.user.includes(usuarioAbuscar)) {
+                console.log(usuarios.user,usuarios.pass);
                 iniciarSesion(usuarios.user, usuarios.pass);
             }
         });
     }
 }
 
-//CON ESTA FUNCION LE LLEGA EL USUARIO QUE SI ESTA REGISTRADO PORQUE SE HA COMPROBADO ANTERIORMENTE, COMPROBAMOS SI EL USUARIO COINCIDE CON LA CONTRASENA
+//CON ESTA FUNCION LE LLEGA EL USUARIO QUE SI ESTA REGISTRADO PORQUE SE HA COMPROBADO ANTERIORMENTE, COMPROBAMOS SI EL USUARIO COINCIDE CON LA CONTRASEÑA
 function iniciarSesion(usuario, pass) {
     let inputPass = document.getElementById("password");
-    //comprobamos que el usuario coincide con su contrasena
-    if (pass == inputPass.value) {
+    //comprobamos que el usuario coincide con su contraseña
+    if (usuario == "admin" && pass == inputPass.value) {
+        location.href = "../panelAdmin.html";
+    }else if (pass == inputPass.value) {
         $(".mensajeError").empty();
         console.log("usuario y contrasena correcto puede acceder");
         cargarHomeUsuario(usuario);
@@ -43,12 +46,5 @@ function iniciarSesion(usuario, pass) {
 }
 
 function cargarHomeUsuario(usuario) {
-    // location.href = "../index.html";
-    // console.log(document.getElementById("loguearse"));
-    console.log("Aqui debo llevarte al perfil usuario");
-    $("#loguearse").empty();
-    $("#loguearse").text(usuario);
-
-    // $("#perfilUsuario").show();
-    // location.href = "../index.html";
+    console.log(`Aqui debo llevarte al perfil del usuario:${usuario}`);
 }

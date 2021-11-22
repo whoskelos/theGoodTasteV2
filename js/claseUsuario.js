@@ -10,24 +10,3 @@ class usuario {
         console.log("la edad del usuario " + nombre + " es " + edad);
     }
 }
-
-const admin1 = new usuario(
-    (nombre = "admin web"),
-    (email = "admin@tgt.com"),
-    (user = "admin"),
-    (pass = "admin")
-);
-
-const admin2 = new usuario(
-    (nombre = "Kelvin Guerrero"),
-    (email = "kelvin@tgt.com"),
-    (user = "kelvin"),
-    (pass = "admin")
-);
-
-const admin3 = new usuario(
-    (nombre = "Miguel Mite"),
-    (email = "miguel@tgt.com"),
-    (user = "miguel"),
-    (pass = "admin")
-);
