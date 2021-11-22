@@ -1,9 +1,13 @@
 onload = function () {
-    $("#btnAcceder").on("click", comprobarUsuarios);
-    $("#btnRegistro").click(function () {
-        location.href = "../registro.html";
-    });
-    // $("#perfilUsuario").hide();
+    $("#resenasItem").hide();
+    if (sessionStorage.getItem("usuarioLogueado") != null) {
+        this.location.href = "../index.html";
+    }else{
+        $("#btnAcceder").on("click", comprobarUsuarios);
+        $("#btnRegistro").click(function () {
+            location.href = "../registro.html";
+        });
+    }
 };
 var listaUsuarios = JSON.parse(localStorage.getItem("usuarios"));
 
@@ -22,7 +26,7 @@ function comprobarUsuarios() {
         let usuarioAbuscar = document.getElementById("usuario").value;
         let usuarioEncontrado = listaUsuarios.filter((usuarios) => {
             if (usuarios.user.includes(usuarioAbuscar)) {
-                console.log(usuarios.user,usuarios.pass);
+                console.log(usuarios.user, usuarios.pass);
                 iniciarSesion(usuarios.user, usuarios.pass);
             }
         });
@@ -35,16 +39,25 @@ function iniciarSesion(usuario, pass) {
     //comprobamos que el usuario coincide con su contraseña
     if (usuario == "admin" && pass == inputPass.value) {
         location.href = "../panelAdmin.html";
-    }else if (pass == inputPass.value) {
+    } else if (pass == inputPass.value) {
+        sessionStorage.setItem("usuarioLogueado", usuario);
         $(".mensajeError").empty();
         console.log("usuario y contrasena correcto puede acceder");
-        cargarHomeUsuario(usuario);
+        mostrarResenas();
     } else {
+        sessionStorage.removeItem("usuarioLogueado");
         $(".mensajeError").empty();
-        $(".mensajeError").append("<span>El usuario/contrasena son incorrectos</span>");
+        $(".mensajeError").append(
+            "<span>El usuario/contrasena son incorrectos</span>"
+        );
     }
 }
 
-function cargarHomeUsuario(usuario) {
-    console.log(`Aqui debo llevarte al perfil del usuario:${usuario}`);
+function mostrarResenas() {
+    console.log(
+        `Aqui debo llevarte al perfil del usuario:${sessionStorage.getItem(
+            "usuarioLogueado"
+        )}`
+    );
+    location.href = "../resenas.html";
 }
