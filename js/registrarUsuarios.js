@@ -39,6 +39,7 @@ function recogerDatos() {
     registrarUsuario(nombreCompleto, email, usuario, pass1);
 }
 
+
 function registrarUsuario(nombre, email, user, pass) {
     if (localStorage.getItem("usuarios") != null) {
         //AQUI CREO EL NUEVO USUARIO EN FORMA DE OBJETO JSON Y LE AÑADO LOS VALORES QUE RECIBE DEL INPUT

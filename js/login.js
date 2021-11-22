@@ -1,5 +1,9 @@
 onload = function () {
     $("#btnAcceder").on("click", comprobarUsuarios);
+    $("#btnRegistro").click(function () {
+        location.href = "../registro.html";
+    });
+    // $("#perfilUsuario").hide();
 };
 var listaUsuarios = JSON.parse(localStorage.getItem("usuarios"));
 
@@ -16,34 +20,34 @@ function comprobarUsuarios() {
     } else {
         //SI NO, BUSCAMOS EN NUESTRO ARRAY DE USUARIOS SI SE ENCUENTRA EL USUARIO INSERTADO
         let usuarioAbuscar = document.getElementById("usuario").value;
-        let usuarioEncontrado = listaUsuarios.filter((usuarios) =>
-            usuarios.user.includes(usuarioAbuscar)
-        );
-        console.log(usuarioEncontrado);
-        if (usuarioEncontrado) {
-            iniciarSesion(inputUsuario.value,inputPass.value);
-        }
+        let usuarioEncontrado = listaUsuarios.filter((usuarios) => {
+            if (usuarios.user.includes(usuarioAbuscar)) {
+                iniciarSesion(usuarios.user, usuarios.pass);
+            }
+        });
     }
 }
 
 //CON ESTA FUNCION LE LLEGA EL USUARIO QUE SI ESTA REGISTRADO PORQUE SE HA COMPROBADO ANTERIORMENTE, COMPROBAMOS SI EL USUARIO COINCIDE CON LA CONTRASENA
 function iniciarSesion(usuario, pass) {
-    //contrasena almacenada en el localstorage del usuario
-
+    let inputPass = document.getElementById("password");
     //comprobamos que el usuario coincide con su contrasena
-    // if (pass == localPassword) {
-    //     console.log("usuario y contrasena correcto puede acceder");
-    // } else {
-    //     console.log("la contrasena no es la correcta");
-    // }
+    if (pass == inputPass.value) {
+        $(".mensajeError").empty();
+        console.log("usuario y contrasena correcto puede acceder");
+        cargarHomeUsuario(usuario);
+    } else {
+        $(".mensajeError").empty();
+        $(".mensajeError").append("<span>El usuario/contrasena son incorrectos</span>");
+    }
 }
 
 function cargarHomeUsuario(usuario) {
-    location.href("../index.html");
-    let listaNav = document.getElementById("menuNav");
-    let perfilUsuario = document.createElement("li");
-    listaNav.appendChild(perfilUsuario);
-    perfilUsuario.classList("nav-item");
-    let enlace = document.createElement("link");
-    perfilUsuario.appendChild(enlace);
+    location.href = "../index.html";
+    console.log(document.getElementById("loguearse"));
+    $("#loguearse").empty();
+    $("#loguearse").text(usuario);
+
+    // $("#perfilUsuario").show();
+    // location.href = "../index.html";
 }
