@@ -1,7 +1,7 @@
 onload = function () {
     $("#resenasItem").hide();
     if (sessionStorage.getItem("usuarioLogueado") != null) {
-        this.location.href = "../index.html";
+        location.href = "../index.html";
     }else{
         $("#btnAcceder").on("click", comprobarUsuarios);
         $("#btnRegistro").click(function () {
@@ -26,7 +26,7 @@ function comprobarUsuarios() {
         let usuarioAbuscar = document.getElementById("usuario").value;
         let usuarioEncontrado = listaUsuarios.filter((usuarios) => {
             if (usuarios.user.includes(usuarioAbuscar)) {
-                console.log(usuarios.user, usuarios.pass);
+                //si esxiste le mandamos el usuario y contraseña a la funcion iniciar sesion
                 iniciarSesion(usuarios.user, usuarios.pass);
             }
         });
@@ -35,14 +35,16 @@ function comprobarUsuarios() {
 
 //CON ESTA FUNCION LE LLEGA EL USUARIO QUE SI ESTA REGISTRADO PORQUE SE HA COMPROBADO ANTERIORMENTE, COMPROBAMOS SI EL USUARIO COINCIDE CON LA CONTRASEÑA
 function iniciarSesion(usuario, pass) {
+    //esta variable guardamos el input donde el usuario escribirá la contraseña
     let inputPass = document.getElementById("password");
-    //comprobamos que el usuario coincide con su contraseña
+    // comprobamos que si el usuario insertado es el admin le redirigimos a la web del panel de administrador
     if (usuario == "admin" && pass == inputPass.value) {
         location.href = "../panelAdmin.html";
+    //comprobamos que cualquier usuario distinto de admin coincide con su contraseña almacenada 
     } else if (pass == inputPass.value) {
+        //almacenamos el usuario en una variable del sessionstorage
         sessionStorage.setItem("usuarioLogueado", usuario);
         $(".mensajeError").empty();
-        console.log("usuario y contrasena correcto puede acceder");
         mostrarResenas();
     } else {
         sessionStorage.removeItem("usuarioLogueado");
@@ -53,11 +55,7 @@ function iniciarSesion(usuario, pass) {
     }
 }
 
+//esta funcion es llamada si el usuario se ha logueado correctamente le llevamos al apartado de resenas.html
 function mostrarResenas() {
-    console.log(
-        `Aqui debo llevarte al perfil del usuario:${sessionStorage.getItem(
-            "usuarioLogueado"
-        )}`
-    );
     location.href = "../resenas.html";
 }
