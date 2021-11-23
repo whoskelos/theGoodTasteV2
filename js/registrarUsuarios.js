@@ -1,6 +1,7 @@
 /**En este documento sanearemos y validaremos los datos introducidos por los usuarios en los input */
 onload = function () {
     $("#btnRegistrar").on("click", recogerDatos);
+    $("#btnDarAlta").on("click", recogerDatos);
     cargarAdmins();
 };
 
